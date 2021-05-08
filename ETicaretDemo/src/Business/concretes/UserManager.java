@@ -50,7 +50,7 @@ public class UserManager implements UserService{
 				System.out.println("Basarili bir sekilde giris yapildi.");
 				return;
 			}else {
-				System.out.println("Emailiniz veya parolanizi hatali girdiniz l�tfen kontol edin.");
+				System.out.println("Emailiniz veya parolanizi hatali girdiniz lütfen kontol edin.");
 			}
 		}
 	}
@@ -58,7 +58,8 @@ public class UserManager implements UserService{
 
 	@Override
 	public void withGooglelogin(User user) {
-		System.out.println("Google ile giris yapildi.");
+		
+		this.googleService.signUp(" Hoşgeldin "+user.getFirstName());
 		
 	}
 }
